@@ -1,7 +1,7 @@
-import { Text, View, StyleSheet, StatusBar, SafeAreaView ,TouchableOpacity, Dimensions} from "react-native";
+import { Text, View, StyleSheet, StatusBar, SafeAreaView, TouchableOpacity, Dimensions } from "react-native";
 
 export default function Index() {
-  
+
   return (
     <View
       style={styles.container}
@@ -10,16 +10,78 @@ export default function Index() {
       <SafeAreaView>
         <Text style={styles.value}>0</Text>
         <View style={{ flexDirection: "row" }}>
-        <TouchableOpacity  style={styles.button}>
-      <Text style={styles.text}>text test</Text>
-    </TouchableOpacity>
-
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>C</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>+/-</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>%</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>/</Text>
+          </TouchableOpacity>
         </View>
+        <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>7</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>8</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>9</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>X</Text>
+          </TouchableOpacity>
+          </View>
+
+          <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>4</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>5</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>6</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>-</Text>
+          </TouchableOpacity>
+          </View>
+
+          <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>3</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>+</Text>
+          </TouchableOpacity>
+          </View>
+
+          <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>0</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>=</Text>
+          </TouchableOpacity>
+
+          </View>
       </SafeAreaView>
     </View>
   );
 
-  
+
 }
 const screen = Dimensions.get("window");
 const buttonWidth = screen.width / 4;
