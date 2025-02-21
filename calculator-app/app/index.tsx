@@ -1,6 +1,25 @@
+import React, { useState } from "react";
 import { Text, View, StyleSheet, StatusBar, SafeAreaView, TouchableOpacity, Dimensions } from "react-native";
 
+
 export default function Index() {
+  const [input, setInput] = useState("0");
+
+  const handleInput = (value: string) => {
+    if (value === "C") {
+      setInput("0");
+    } else {
+      setInput(input === "0" ? value : input + value);
+    }
+  };
+  const handleCalculate = () => {
+    try {
+      const result = eval(input);
+      setInput(Number.isFinite(result) ? result.toString() : "Error");
+    } catch (error) {
+      setInput("Error");
+    }
+  };
 
   return (
     <View
